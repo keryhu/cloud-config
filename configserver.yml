@@ -1,10 +1,5 @@
-info:
-  description: Spring Cloud Samples
-  url: https://github.com/spring-cloud-samples
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.99.100:8761/eureka/
+
+
 
 ---
 spring:
@@ -39,17 +34,19 @@ ribbon:
   ReadTimeout: 60000
 
 ---
+#docker 环境
 spring:
   profiles: docker
-  cloud:
-    config:
-      uri: http://${CONFIGSERVER_1_PORT_8888_TCP_ADDR:192.168.99.100}:8888
+
 endpoints:
-  restart: enabled
+  restart:
+    enabled: true
+     
 eureka:
   instance:
-    nonSecurePort: 80
-    preferIpAddress: true
+    #当是https的时候，这个需要改动
+    nonSecurePort: 8888
+    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_1_PORT_8761_TCP_ADDR:192.168.99.100}:8761/eureka/
+      defaultZone: http://192.168.99.100:8761/eureka/
