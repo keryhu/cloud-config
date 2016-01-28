@@ -1,7 +1,5 @@
 
 
-
----
 spring:
   profiles: cloud
   cloud:
@@ -33,20 +31,5 @@ ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
 
----
-#docker 环境
-spring:
-  profiles: docker
 
-endpoints:
-  restart:
-    enabled: true
-     
-eureka:
-  instance:
-    #当是https的时候，这个需要改动
-    nonSecurePort: 8888
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.99.100:8761/eureka/
+
