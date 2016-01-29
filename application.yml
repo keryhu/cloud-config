@@ -1,0 +1,6 @@
+#这是spring cloud config 全局配置，所有的的用户都能看得到
+info:
+  description: Spring Cloud Config ，All Client Can See And Use
+  url: https://github.com/keryhu/cloud-config
+
+
