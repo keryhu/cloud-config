@@ -8,7 +8,7 @@ spring:
   cloud:
     config:
       uri: http://${CONFIGSERVER_PORT_8888_TCP_ADDR:localhost}:8888
-      fail-fast: true
+      
 endpoints:
   restart:
     enabled: true
