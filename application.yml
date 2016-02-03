@@ -3,9 +3,6 @@ info:
   description: Spring Cloud Config ，All Client Can See And Use
   url: https://github.com/keryhu/cloud-config
 
-config:
-  server:
-    password: password
   
 #spring:
   #profiles: docker
