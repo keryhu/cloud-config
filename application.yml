@@ -2,12 +2,16 @@
 info:
   description: Spring Cloud Config ，All Client Can See And Use
   url: https://github.com/keryhu/cloud-config
+
+config:
+  server:
+    password: password
   
 spring:
   #profiles: docker
   cloud:
     config:
-      uri: http://user:password@${CONFIGSERVER_PORT_8888_TCP_ADDR:localhost}:8888
+      uri: http://user:${config.server.password}@${CONFIGSERVER_PORT_8888_TCP_ADDR:localhost}:8888
       
       
 endpoints:
@@ -18,10 +22,11 @@ endpoints:
   health:
     sensitive: false
 eureka:
+  password: password
   instance:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://user:password@${EUREKA_PORT_8761_TCP_ADDR:localhost}:8761/eureka/
+      defaultZone: http://${EUREKA_PORT_8761_TCP_ADDR:localhost}:8761/eureka/
 
 
