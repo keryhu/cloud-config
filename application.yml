@@ -4,17 +4,7 @@ info:
   url: https://github.com/keryhu/cloud-config
 
 
-config:
-  server:
-    password: 1
-  
-spring:
-  #profiles: docker
-  cloud:
-     config:
-       uri: http://user:${config.server.password}@${CONFIGSERVER_PORT_8888_TCP_ADDR:localhost}:8888
-     # uri: http://user:${config.server.password}@localhost:8888
-      
+
       
 endpoints:
   restart:
