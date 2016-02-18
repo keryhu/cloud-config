@@ -1,15 +1,5 @@
 info:
   auth-server: this is auth-server config yml
   
-  #加密数据库用户名，密码
-mongo:
-  username: '{cipher}AQBmsPBflYXAHt5ZOUxpC2mAsmSUT9SxcoHN1Fb0XFXU+lZBNMI7EjFmnjoNEOOD/++AWnhRamijg/l5m4uJi8CB8C+R8K3+9EKRGz++uifqmKHlRJHh9S+LeMltmNTPCw20hD3T1xtvIqdDxSyUnPyRcb7ewHnmR/EwHoXHHtkLwiiFgBN7U11hXwJuqPx6Ewz9cmhMDEMey526/rOxVtRioNjw0efepVPNX2g7XE1sibrD5J76rbyQPLg1CLm0xTKZ1GQrxyEcTzLGCr194/JlJbYRG1mxoUIj16yDCz3DaZZ7ZQjXyXaO5If2a/eA5VzFmcOHhC/uj/XqkdOU91LGqQg3DRsuEidvkkGt4yHufqQ7zHvKQvKqZUE93HAsAuQ='
-  password: '{cipher}AQBL2sxqHcQVxUe/t/wwqF36xRrbjTyLVj+0czHKgqXo83ZyCOzwwr/Gq8iIJjAn1G9s33+dVSt/ggR65eSrqBcIgQQflbVT1qTATLL8aJgRnMMsiXb/qEJKxbtPUmsLxfQoqFuSfH0LWADJzTAgO1i3K606W5oQZSJYwlan3CwatPVZ+FXdy89KvN0yK2J74I2jx77FEu7iMArgimC1hy+AMTZBgoRJimmwz/MJ5uCuo6qvk1bhbk/JVNxo+fr5dCyPAFin4AHKJuqXD+10lZ7CZEk4VTqT0Sn1lBQVTbG9O/m3yNPev4xZyNaA0y39SFqL06O30tiDLmjLJvLL9/nYGwxaMJgfMMUJl1Nkvtod/ciyheu0rvv7+AefXa4/Fwg='
-  
-spring:
-  data:
-    mongodb:
-      uri: mongodb://${mongo.username}:${mongo.password}@${MONGODB_HOST:localhost}:${MONGODB_PORT:27017}/test
-      repositories:
-        enabled: true
+ 
   
