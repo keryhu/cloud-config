@@ -1,3 +1,2 @@
-# cloud-config
-test git spring cloud config server
-jj
+# cloud-config-mac
+this is spring cloud config github url for my local computer mode .
