@@ -16,8 +16,11 @@ endpoints:
 eureka:
   password: password
   instance:
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
     preferIpAddress: true
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
        defaultZone: http://${domain.name:localhost}:8761/eureka/
 
