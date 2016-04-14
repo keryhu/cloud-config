@@ -16,8 +16,9 @@ endpoints:
 eureka:
   password: password
   instance:
+    leaseRenewalIntervalInSeconds: 10
     metadataMap:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+      instanceId: ${${spring.application.name}:${server.port}}
     preferIpAddress: true
   client:
     registryFetchIntervalSeconds: 5
