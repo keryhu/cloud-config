@@ -19,7 +19,7 @@ eureka:
     hostname: ${domain.name:localhost}
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     preferIpAddress: true
   client:
     registryFetchIntervalSeconds: 5
