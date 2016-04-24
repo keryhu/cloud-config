@@ -38,9 +38,9 @@ security:
       user-info-uri: http://${domain.name:localhost}:9999/uaa/user
 
 
-#spring:
-# cloud:
-#   inetutils:
-#     ignoredInterfaces:
-#       - docker0
-#        - veth.*
+spring:
+ cloud:
+   inetutils:
+     ignoredInterfaces:
+       - docker0
+       - veth.*
