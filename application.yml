@@ -16,10 +16,8 @@ endpoints:
 eureka:
   password: password
   instance:
-    #hostname: ${domain.name:localhost}
     leaseRenewalIntervalInSeconds: 10
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     preferIpAddress: true
   client:
     registryFetchIntervalSeconds: 5
