@@ -1,0 +1,3 @@
+info:
+  user-account: this is user account yml
+  description: 实现了user account 数据库对外的CRUD 读写查询的Api 接口。而且加上了spring cloud OAuth2 Resource server security 配置，可以根据权限不同，实现不同的身份检查。没有权限则不同进行相应的操作。

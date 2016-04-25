@@ -1,0 +1,6 @@
+info:
+  auth-server: this is auth-server config yml
+  description: 实现了spring cloud oauth2 jwt sso配置。
+
+ 
+  

@@ -1,0 +1,4 @@
+info:
+  pc-gateway: this is through spring cloud pc html5 gateway
+  description: 实现了spring cloud pc gateway ， 实现了spring zuul proxy 路由智能分配， 导航到不同的micro-service
+    还实现了spring cloud OAuth2 sso 登陆。

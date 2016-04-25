@@ -1,0 +1,3 @@
+info:
+  user-account: this is property register yml
+  description: 实现了物业公司pc html5 后台注册功能。注册是不需要进行security 验证。。

@@ -1,0 +1,6 @@
+info:
+  mail-server: this is mail-server config yml
+  description: 实现了spring cloud mail server 邮件配置。
+
+ 
+  

@@ -1,0 +1,7 @@
+
+info:
+  auth-server: this is config-server config yml
+  description: 实现了spring cloud config server配置。 单独实现了spring security 
+
+
+
