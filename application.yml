@@ -15,8 +15,8 @@ endpoints:
     sensitive: false
 eureka:
   password: password
-  instance:
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  #instance:
+  #  instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     leaseRenewalIntervalInSeconds: 10
     preferIpAddress: true
   client:
