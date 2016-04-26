@@ -16,8 +16,8 @@ endpoints:
 eureka:
   password: password
   instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     leaseRenewalIntervalInSeconds: 10
-    instance-id: ${${domain.name}:${spring.application.name}}:${spring.application.instance_id:${server.port}}
     preferIpAddress: true
   client:
     registryFetchIntervalSeconds: 5
