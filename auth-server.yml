@@ -2,5 +2,9 @@ info:
   auth-server: this is auth-server config yml
   description: 实现了spring cloud oauth2 jwt sso配置。
 
- 
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
   
