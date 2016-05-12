@@ -41,3 +41,7 @@ spring:
      ignoredInterfaces:
        - docker0
        - veth.*
+
+#取得当前的ip地址
+hostProperty:
+  hostName: http://${domain.name:localhost}
