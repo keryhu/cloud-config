@@ -41,11 +41,33 @@ security:
 
 
 spring:
- cloud:
-   inetutils:
-     ignoredInterfaces:
-       - docker0
-       - veth.*
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+       
+  rabbitmq:
+    dynamic: true
+    host: ${rabbit.host:localhost}
+    port: 5672
+    username: '{cipher}AQAF6nvt7lf6Lxk74hfrK31IGeQQZ10FSGdc2DreIzPiMqylrKos2suU7lmBIdKZaQC2TE2bZDHIF7Af6l+zYlMc6uKXAJIQ5AZbu3LgxEu14xHx+hsfYStYFNKLotTiuj+p0Pm/UqKl+L/Gzmhbtb6v+KfXTQSmqrouDuZK+jVYpI5LNL+HSuLQufYnbYzhB39H74BVVxZ5QcWCBH0gEhsSBLuN/6h5KzavGHUv9pMkg2ET26um55aW5KqJAq6iv+F0Uffe2vmNuoWoZiWcD1OPkwAdCYB5o4Ynpk8CxAAcDtX4z92gYhNsRr01L5vjuKhtE/SlXq5EEQz4UtdffCj9hbBCvvOW4rn/1zSrTJGEmJX7G8iUSnMhP1CsEyjvmIg='
+    password:  '{cipher}AQAL0B9uaPy7aQdr16b8udVEkvNQDU8LXwZwtIviWoj/HyKEwrqgPJDoWKiBgGxtf+lVFVG9mCfj50Yu63Jp6rjTXPVeOUCrZfrlrhYXovDAZ+WAZwCCF13YRkewnmazKTRXBqhV4Zgk7KRVZrIYEzrbB5rvzgIkA8OX+FC7Uw4emiQBtwHsww03+kxB9CwmjDNMl143MjzFpDydoYlpPJrrlwO9tDcF/XDxoekOfaGGIq0+UfCkxM73PtMIUBVRiaK0UPQTSXUvs46Hu5Dc57nLnyydBY9ZAepJ6grjxQSqs7jxgUjjJC/W86A5T/GnBsoq8Di/IhLahglM1MCR+wxA3seihqnkwoXEhHqpBgKoewB7Sv8fOGztuJn4dHQqCJI='
+    virtual-host: /wfij
+    listener:
+     
+      #max pool size of thread is 100
+      max-concurrency: 100
+      #核心的listen thread 是3 
+      concurrency: 50
+      # the container will acknowledge the message automatically, unless the MessageListener throws an exception. Note that acknowledgeMode is complementary to channelTransacted - if the channel is transacted then the broker requires a commit notification in addition to the ack. This is the default mode. See also txSize.
+      acknowledge-mode: auto
+      auto-startup: true
+      #The number of messages to accept from the broker in one socket frame
+      prefetch: 50
+      #When used with acknowledgeMode AUTO, the container will attempt to process up to this number of messages before sending an ack 
+      transaction-size: 50
+        
 
 #取得当前的ip地址
 hostProperty:
