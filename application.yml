@@ -14,6 +14,7 @@ endpoints:
   health:
     sensitive: false
 eureka:
+  password: '{cipher}AQBtzK5N6P43YVBOSSX9TT7+V3U9F51hUihSTAhPn0jZS+BwhsaIH99r1CotzHmLQUhWqnq8UvhnFuIKmOFfDjzJUEkPC8+ZtETj3iGglJWKZuGYzVNaF53lbsaObiTNc90U/9vcbheQ/bEk9XCg4sBZ7Y4g7D3UI86542MLaLuZU3ca1h3P+WHcT8XriXQ2s2/CY7Hh4hWMMLfYpPs3zzVNOjB7Tc8tQ9MI728bsNg4oSxrfxY+uRJsiO9weYlgDBhnIB3ht7XbtLvLS1wrXwPH2HR0lS9X+ncutkzjNeFGWvDnqYh3wUbuabwNxxDZEvZTfL4MupKEWxhdT4KCPmM9DLoqptCLYEdkNV89yoaQ/m3xF+NzZDWPedX/30y/m8Y='
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     leaseRenewalIntervalInSeconds: 10
@@ -21,7 +22,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-       defaultZone: http://15900455491:skdjf7782c@${domain.name:localhost}:8761/eureka/
+       defaultZone: http://15900455491:${eureka.password}@${domain.name:localhost}:8761/eureka/
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 
